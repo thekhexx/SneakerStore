@@ -28,7 +28,7 @@ class _CartItemState extends State<CartItem> {
       ),
       margin: const EdgeInsets.only(bottom: 10),
       child: ListTile(
-        leading: Image.asset(widget.shoe.imageUrl),
+        leading: Image.network(widget.shoe.imageUrl),
         title: Text(widget.shoe.name, style: Theme.of(context).textTheme.titleMedium,),
         subtitle: Text('\$${widget.shoe.price}'),
         trailing: IconButton(

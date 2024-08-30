@@ -23,7 +23,7 @@ class ShoeTile extends StatelessWidget {
             // Shoe picture
             ClipRRect(
               borderRadius: BorderRadius.circular(12.0),
-              child: Image.network(shoe.imageUrl, width: 150, height: 150),
+              child: FittedBox(fit: BoxFit.fill, child: Image.network(shoe.imageUrl)),
             ),
             // Shoe price and details
             Padding(

@@ -12,6 +12,8 @@ class SneakerListFilter(django_filters.rest_framework.FilterSet):
         field_name='price', lookup_expr='gte')
     max_price = django_filters.NumberFilter(
         field_name='price', lookup_expr='lte')
+    brand = django_filters.NumberFilter(
+        field_name='brand', lookup_expr='exact')
 
     def title_filter(self, queryset, name, value):
         return queryset.filter(Q(name__icontains=value) | Q(description__icontains=value) | Q(brand__name__icontains=value))

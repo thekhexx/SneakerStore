@@ -11,9 +11,9 @@ from .filters import SneakerListFilter
 
 
 class ListSneakers(ListAPIView):
+    permission_classes = [permissions.AllowAny]
     queryset = Sneaker.objects.filter(is_published=True)
     serializer_class = SneakerListSerializer
-    permission_classes = [permissions.AllowAny]
     filter_backends = [filters.OrderingFilter,
                         django_filters.rest_framework.DjangoFilterBackend]
     filterset_class = SneakerListFilter
@@ -26,7 +26,5 @@ class ListSneakers(ListAPIView):
 
 class ListBrands(ListAPIView):
     permission_classes = [permissions.AllowAny]
-    def get(self, request, format=None):    
-        queruset = Brand.objects.all()
-        serializer = BrandSerializer(queruset, many=True)
-        return Response(serializer.data)
+    serializer_class = BrandSerializer
+    queryset = Brand.objects.all()

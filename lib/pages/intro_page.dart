@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'home_page.dart';
 
 class IntroPage extends StatelessWidget {
@@ -16,17 +17,12 @@ class IntroPage extends StatelessWidget {
               // Logo
               Padding(
                 padding: const EdgeInsets.all(25.0),
-                child: Image.asset(
-                  'lib/images/logo.svg',
-                  width: 240,
-                  height: 240,
-                  color: Colors.grey[900],
-                ),
+                child: Icon(Icons.storefront_outlined, size: 100),
               ),
 
               const SizedBox(height: 48),
               // Title
-              Text('Just Do It', style: Theme.of(context).textTheme.titleLarge),
+              Text('The Sneaker Store', style: Theme.of(context).textTheme.titleLarge),
 
               // Subtitle
               Text(

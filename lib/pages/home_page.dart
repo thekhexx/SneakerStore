@@ -40,11 +40,8 @@ class _HomePageState extends State<HomePage> {
               children: [
                 // logo
                 DrawerHeader(
-                    child: Image.asset(
-                  'lib/images/logo.svg',
-                  color: Colors.grey.shade400,
-                  width: 200,
-                )),
+                    child: Icon(Icons.storefront_outlined, size: 50, color: Colors.grey[800],)
+                ),
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),

@@ -21,14 +21,14 @@ class ShoeTile extends StatelessWidget {
         children: [
           // Shoe picture
           ClipRRect(
-            child: Image.asset(shoe.imageUrl),
             borderRadius: BorderRadius.circular(12.0),
+            child: Image.network(shoe.imageUrl, width: 300, height: 300),
           ),
           // Shoe description
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
-              shoe.description,
+              shoe.brandName,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ),

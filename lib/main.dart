@@ -9,7 +9,6 @@ void main() {
 
 class SneakerStoreApp extends StatelessWidget {
   const SneakerStoreApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
